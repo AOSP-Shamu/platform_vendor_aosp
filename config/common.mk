@@ -24,7 +24,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ota.romname=AOSP-Shamu \
     ro.ota.version=$(shell date -u +%Y%m%d) \
-    ro.ota.manifest=https://romhut.com/roms/AOSP-Shamu/ota.xml
+    ro.ota.manifest=https://romhut.com/roms/aosp-shamu/ota.xml
+    ro.ota.download_loc=ROM
+    ro.ota.default_theme=0
 
 # by default, do not update the recovery with system updates
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
