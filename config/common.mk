@@ -21,6 +21,24 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     OTAUpdates
 
+# EXT4/F2FS format script
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/bin/format.sh:system/bin/format.sh
+
+# Extra tools
+PRODUCT_PACKAGES += \
+    e2fsck \
+    mke2fs \
+    tune2fs \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs \
+    ntfsfix \
+    ntfs-3g
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ota.romname=AOSP-Shamu \
     ro.ota.version=$(shell date -u +%Y%m%d) \
