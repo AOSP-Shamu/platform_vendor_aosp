@@ -27,6 +27,9 @@ PRODUCT_COPY_FILES += \
 
 # Extra tools
 PRODUCT_PACKAGES += \
+    bash \
+    nano \
+    openvpn \
     e2fsck \
     mke2fs \
     tune2fs \
@@ -42,6 +45,20 @@ PRODUCT_PACKAGES += \
 # For keyboard gesture typing
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+
+# general properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
+    ro.com.android.wifi-watchlist=GoogleGuest \
+    ro.setupwizard.enterprise_mode=1
+
+ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=android-google
+else
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
+endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ota.romname=AOSP-Shamu \
