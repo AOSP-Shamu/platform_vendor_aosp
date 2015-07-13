@@ -44,7 +44,7 @@ PRODUCT_PACKAGES += \
 
 # For keyboard gesture typing
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    vendor/aosp/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
 
 # general properties
 PRODUCT_PROPERTY_OVERRIDES += \
