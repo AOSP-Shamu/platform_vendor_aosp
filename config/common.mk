@@ -39,6 +39,10 @@ PRODUCT_PACKAGES += \
     ntfsfix \
     ntfs-3g
 
+# For keyboard gesture typing
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ota.romname=AOSP-Shamu \
     ro.ota.version=$(shell date -u +%Y%m%d) \
