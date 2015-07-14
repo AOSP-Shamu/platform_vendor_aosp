@@ -4,19 +4,18 @@
 
 ### Changelog
 
-#### 20150713
+#### 20150714
 * Rebased to LYZ28E (android-5.1.1_r5 Wifi Calling)
 * Enabled the USB OTG removable notification to be dismissed
-* Build official kernel from source (instead of prebuilt)
+* Build official kernel from source (instead of prebuilt - no changes)
 * Use Nexus sounds and ringtones
-* Default to non-enforced encryption
-* Enabled tethering without provisioning
+* Default to non-enforced encryption (encrypted version found in addons)
+* Enabled tethering without provisioning (for those that affects)
 * Fix for MMS sending FC
 * Removed video editor libraries (not used in Lollipop)
 * Changed zip format from system.dat to non-block method (a system folder, with apk's, etc)
 * Fully removed recovery patching from the zip
 * Various build improvements (mainly for me when building)
-* Enabled F2FS support (it was already in there, I just had to enable it like USG OTG)
 
 #### 20150702
 * Added USB OTG support
