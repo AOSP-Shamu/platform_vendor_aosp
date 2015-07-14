@@ -21,21 +21,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     OTAUpdates
 
-# EXT4/F2FS format script
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bin/format.sh:system/bin/format.sh
-
 # Extra tools
 PRODUCT_PACKAGES += \
     bash \
     nano \
-    openvpn \
-    e2fsck \
-    mke2fs \
-    tune2fs \
-    mkfs.f2fs \
-    fsck.f2fs \
-    fibmap.f2fs 
+    openvpn 
 
 # For keyboard gesture typing
 PRODUCT_COPY_FILES += \
